@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <button onclick="setLink()">вести посилання</button>
+    <button onclick="redirect()">перейти</button>
+
+    <script>
+        let savedLink = "";
+
+        function setLink() {
+            const link = prompt("введіть посилання:");
+            if (link) {
+                savedLink = link;
+                alert("Посилання збережено");
+            }
+        }
+
+        function redirect() {
+            if (savedLink) {
+                window.location.href = savedLink;
+            } else {
+                alert("Спочатку введіть посилання!");
+            }
+        }
+    </script>
+</body>
+</html>
